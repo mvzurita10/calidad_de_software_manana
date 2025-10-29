@@ -2,7 +2,7 @@ const {estadoNota} = require('./estadoNota');
 
 describe('estadoNota', () => {
     test('Happy path: 8 Aprobado',() => {
-        expect(estadoNota(80)).toBe('Aprobado');
+        expect(estadoNota(8)).toBe('Aprobado');
     });
     test('Happy path: 5 Supletorio',() => {
         expect(estadoNota(5)).toBe('Supletorio');
