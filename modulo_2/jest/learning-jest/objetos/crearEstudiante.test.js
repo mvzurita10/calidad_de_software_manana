@@ -1,15 +1,15 @@
 const {crearEstudiante} = require('./crearEstudiante');
 
-describe('CrearEstudiante', () => {
-    test('Happy path', () => {
-        expect(CrearEstudiante(Maria, 17)).toBe({
-            nombre: 'Maria',
+describe('Crear Estudiante', () => {
+    test('Happy path:', () => {
+        expect(crearEstudiante('maria', 17)).toEqual({
+            nombre: 'maria',
             edad: 17
         });
     });
 
-    test('Sad path - nombre/edad invalido', () => {
-        expect(() => crearEstudiante('', 20)).toThrow ('nombre invalido');
-        expect(() => crearEstudiante("Maria", -1)).toThrow ("edad invalida");
+    test('Sad path: nombre / edad invalidos', () => {
+        expect(() => crearEstudiante('',20)).toThrow('nombre invalido');
+        expect(() => crearEstudiante('Ana', -1)).toThrow('edad invalida');
     });
-});  
+});
