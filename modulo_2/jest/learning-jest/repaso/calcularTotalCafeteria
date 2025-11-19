@@ -1,0 +1,12 @@
+function calcularTotalCafeteria(items, ivaPorcentaje) {
+    if (!Array.isArray(items)) throw new Error('items debe ser un arreglo');
+    return items.reduce((total, item) => {
+        if (typeof item.precio !== 'number' || typeof item.cantidad !== 'number') {
+            throw new Error('Cada item debe tener precio y cantidad numericos');
+        }
+        return total + item.precio * item.cantidad;
+    }, 0);
+}
+module.exports = { calcularTotalCafeteria } 
+
+
